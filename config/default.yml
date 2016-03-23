@@ -3,3 +3,6 @@ require: rubocop/devtools
 Devtools/AnnotateNamespace:
   Description: 'Check that the ends of modules and classes are annotated'
   Enabled: true
+Devtools/SpecifyIt:
+  Description: 'Check for RSpec specs using `it do`'
+  Enabled: true
