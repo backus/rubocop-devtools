@@ -1,1 +1,5 @@
 require: rubocop/devtools
+
+Devtools/AnnotateNamespace:
+  Description: 'Check that the ends of modules and classes are annotated'
+  Enabled: true

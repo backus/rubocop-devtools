@@ -7,3 +7,6 @@ require 'rubocop/devtools/version'
 require 'rubocop/devtools/inject'
 
 RuboCop::Devtools::Inject.defaults!
+
+# cops
+require 'rubocop/cop/devtools/annotate_namespace'
