@@ -1,0 +1,115 @@
+---
+require:
+  - rubocop-rspec
+  - rubocop/devtools
+
+AllCops:
+  Exclude:
+  - vendor/**/*
+  DisplayCopNames: true
+  TargetRubyVersion: 2.3
+
+# This ends up being too spammy
+Documentation:
+  Enabled: false
+
+ExtraSpacing:
+  AllowForAlignment: true
+
+LineLength:
+  Max: 100
+
+IfUnlessModifier:
+  MaxLineLength: 100
+
+Next:
+  EnforcedStyle: always
+
+PercentLiteralDelimiters:
+  PreferredDelimiters:
+    '%i': '[]'
+    '%I': '[]'
+    '%q': '{}'
+    '%Q': '{}'
+    '%r': '{}'
+    '%s': ()
+    '%w': '[]'
+    '%W': '[]'
+    '%x': ()
+
+TrivialAccessors:
+  ExactNameMatch: false
+
+MethodCalledOnDoEndBlock:
+  Enabled: true
+
+SymbolArray:
+  Enabled: true
+
+BarePercentLiterals:
+  EnforcedStyle: percent_q
+
+CollectionMethods:
+  Enabled: true
+
+Send:
+  Enabled: true
+
+AutoResourceCleanup:
+  Enabled: true
+
+FirstArrayElementLineBreak:
+  Enabled: true
+
+FirstHashElementLineBreak:
+  Enabled: true
+
+FirstMethodArgumentLineBreak:
+  Enabled: true
+
+FirstMethodParameterLineBreak:
+  Enabled: true
+
+MultilineArrayBraceLayout:
+  Enabled: true
+
+MultilineAssignmentLayout:
+  EnforcedStyle: new_line
+  Enabled: true
+
+MultilineHashBraceLayout:
+  Enabled: true
+
+MultilineMethodCallBraceLayout:
+  Enabled: true
+
+MultilineMethodDefinitionBraceLayout:
+  Enabled: true
+
+OptionHash:
+  Enabled: true
+
+StringMethods:
+  Enabled: true
+
+MissingElse:
+  Enabled: true
+  EnforcedStyle: case
+
+IndentArray:
+  EnforcedStyle: consistent
+
+IndentHash:
+  EnforcedStyle: consistent
+
+MultilineMethodCallIndentation:
+  EnforcedStyle: indented
+
+Alias:
+  EnforcedStyle: prefer_alias_method
+
+AlignHash:
+  EnforcedColonStyle: table
+
+SignalException:
+  EnforcedStyle: semantic
