@@ -4,7 +4,7 @@
 RSpec.describe 'RuboCop Project' do # rubocop:disable RSpec/DescribeClass
   describe 'default configuration file' do
     let(:cop_names) do
-      root = Pathname.new(__dir__).parent.expand_path
+      root = Pathname.new(__dir__).parent.parent.expand_path
 
       Pathname.glob("#{root}/lib/rubocop/cop/devtools/*.rb")
         .map do |file|
