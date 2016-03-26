@@ -1,0 +1,27 @@
+# rcov generated
+coverage
+coverage.data
+
+# rdoc generated
+rdoc
+
+# yard generated
+doc
+.yardoc
+
+# bundler
+.bundle
+Gemfile.lock
+Gemfile.local
+
+# jeweler generated
+pkg
+
+/vendor
+
+.ruby-gemset
+.ruby-version
+spec/.rspec-state
+
+# Bring your own workflow / tooling
+Guardfile

@@ -1,6 +1,6 @@
 # rubocop-devtools
 
-Rubocop extensions for [devtools][gh-devtools](/mbj/devtools)
+Rubocop extensions for [devtools][gh-devtools]
 
 ## Credits
 

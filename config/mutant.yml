@@ -1,0 +1,5 @@
+---
+name: rubocop/devtools
+namespace: RuboCop::Cop::Devtools
+expect_coverage: 1/1
+ignore_subjects: []
