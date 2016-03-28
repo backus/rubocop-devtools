@@ -32,30 +32,14 @@ module RuboCop
       #     it { should be_valid }
       #   end
       class NamedSubject < Cop
+        include RSpecOnly
+
         MSG = 'Name your test subject if you need to reference it explicitly.'
-        SPEC_FILE_ENDING = '_spec.rb'
 
         def on_send(node)
           return unless rspec? && node.method_name.equal?(:subject)
 
           add_offense(node, :selector) if in_spec_block?(node)
-        end
-
-        private
-
-        # ignore :reek:UtilityFunction
-        def in_spec_block?(node)
-          node.each_ancestor(:block).any? do |ancestor|
-            %i[it specify].include?(ancestor.method_name)
-          end
-        end
-
-        def rspec?
-          source_filename.end_with?(SPEC_FILE_ENDING)
-        end
-
-        def source_filename
-          processed_source.buffer.name
         end
       end # NamedSubject
     end # Devtools

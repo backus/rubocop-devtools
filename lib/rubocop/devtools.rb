@@ -5,6 +5,7 @@ require 'rubocop'
 
 require 'rubocop/devtools/version'
 require 'rubocop/devtools/inject'
+require 'rubocop/cop/devtools/mixin/rspec_only'
 
 RuboCop::Devtools::Inject.defaults!
 
@@ -12,3 +13,4 @@ RuboCop::Devtools::Inject.defaults!
 require 'rubocop/cop/devtools/annotate_namespace'
 require 'rubocop/cop/devtools/specify_it'
 require 'rubocop/cop/devtools/named_subject'
+require 'rubocop/cop/devtools/leading_subject'

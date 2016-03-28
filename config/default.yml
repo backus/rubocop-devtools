@@ -9,3 +9,6 @@ Devtools/SpecifyIt:
 Devtools/NamedSubject:
   Description: 'Name your RSpec subject if you reference it explicitly'
   Enabled: true
+Devtools/LeadingSubject:
+  Description: 'Declare your RSpec test subject before let declarations'
+  Enabled: true

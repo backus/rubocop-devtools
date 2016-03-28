@@ -3,6 +3,10 @@
 
 RSpec.describe 'RuboCop Project' do # rubocop:disable RSpec/DescribeClass
   describe 'default configuration file' do
+    subject(:default_config) do
+      RuboCop::ConfigLoader.load_file('config/default.yml')
+    end
+
     let(:cop_names) do
       root = Pathname.new(__dir__).parent.parent.expand_path
 
@@ -16,10 +20,6 @@ RSpec.describe 'RuboCop Project' do # rubocop:disable RSpec/DescribeClass
 
           "Devtools/#{cop_name}"
         end
-    end
-
-    subject(:default_config) do
-      RuboCop::ConfigLoader.load_file('config/default.yml')
     end
 
     it 'has configuration for all cops' do
