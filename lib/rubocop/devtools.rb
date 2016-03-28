@@ -11,3 +11,4 @@ RuboCop::Devtools::Inject.defaults!
 # cops
 require 'rubocop/cop/devtools/annotate_namespace'
 require 'rubocop/cop/devtools/specify_it'
+require 'rubocop/cop/devtools/named_subject'

@@ -6,3 +6,6 @@ Devtools/AnnotateNamespace:
 Devtools/SpecifyIt:
   Description: 'Check for RSpec specs using `it do`'
   Enabled: true
+Devtools/NamedSubject:
+  Description: 'Name your RSpec subject if you reference it explicitly'
+  Enabled: true

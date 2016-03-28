@@ -1,9 +1,12 @@
 # frozen_string_literal: true
 
 module ExpectViolation
-  def expect_violation(source)
+  DEFAULT_FILENAME = 'example.rb'
+
+  def expect_violation(source, filename: DEFAULT_FILENAME)
     expectation = RuboCop::Devtools::Expectation.new(source)
-    inspect_source(cop, expectation.source)
+
+    inspect_source(cop, expectation.source, filename)
 
     offenses = cop.offenses.map(&method(:to_assertion)).sort
 
