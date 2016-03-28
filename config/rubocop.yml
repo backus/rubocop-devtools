@@ -3,6 +3,9 @@ require:
   - rubocop-rspec
   - rubocop/devtools
 
+inherit_gem:
+  rubocop-devtools: 'config/default.yml'
+
 AllCops:
   Exclude:
   - vendor/**/*

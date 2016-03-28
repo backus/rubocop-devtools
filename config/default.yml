@@ -12,3 +12,6 @@ Devtools/NamedSubject:
 Devtools/LeadingSubject:
   Description: 'Declare your RSpec test subject before let declarations'
   Enabled: true
+Devtools/GroupSingleLineLet:
+  Description: 'Declare single line lets next to each other without newlines'
+  Enabled: true
