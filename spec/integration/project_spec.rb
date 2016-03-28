@@ -7,10 +7,10 @@ RSpec.describe 'RuboCop Project' do # rubocop:disable RSpec/DescribeClass
       RuboCop::ConfigLoader.load_file('config/default.yml')
     end
 
-    let(:cop_names) do
-      root = Pathname.new(__dir__).parent.parent.expand_path
+    let(:project_root) { Pathname.new(__dir__).parent.parent.expand_path }
 
-      Pathname.glob("#{root}/lib/rubocop/cop/devtools/*.rb")
+    let(:cop_names) do
+      Pathname.glob("#{project_root}/lib/rubocop/cop/devtools/*.rb")
         .map do |file|
           cop_name =
             file
@@ -32,6 +32,17 @@ RSpec.describe 'RuboCop Project' do # rubocop:disable RSpec/DescribeClass
         expect(description).not_to be_nil
         expect(description).not_to include("\n")
       end
+    end
+
+    it 'organizes spec files in spec/integration, spec/unit, and spec/support' do
+      spec_directory = project_root.join('spec')
+
+      expect(Pathname.glob(spec_directory.join('*'))).to eql([
+        spec_directory.join('integration'),
+        spec_directory.join('spec_helper.rb'),
+        spec_directory.join('support'),
+        spec_directory.join('unit')
+      ])
     end
   end
 end
