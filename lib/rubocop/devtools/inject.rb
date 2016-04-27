@@ -13,11 +13,13 @@ module RuboCop
         '../../../../config/default.yml', __FILE__
       )
 
+      # ignore :reek:TooManyStatements because I didn't write this
       def self.defaults!
-        hash = YAML.load_file(DEFAULT_FILE)
+        path = File.absolute_path(DEFAULT_FILE)
+        hash = ConfigLoader.__send__(:load_yaml_configuration, path)
+        config = Config.new(hash, path)
         puts "configuration from #{DEFAULT_FILE}" if ConfigLoader.debug?
-        config = ConfigLoader.merge_with_default(hash, DEFAULT_FILE)
-
+        config = ConfigLoader.merge_with_default(config, path)
         ConfigLoader.instance_variable_set(:@default_configuration, config)
       end
     end # Inject

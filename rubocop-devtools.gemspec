@@ -26,8 +26,8 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency('anima',      '~> 0.3.0')
   gem.add_runtime_dependency('concord',    '~> 0.1.5')
 
-  gem.add_development_dependency('devtools', '~> 0.1.5')
+  gem.add_development_dependency('devtools', '~> 0.1.6')
   gem.add_development_dependency('rspec', '~> 3.4')
-  gem.add_development_dependency('rubocop', '~> 0.37')
+  gem.add_development_dependency('rubocop', '~> 0.39')
   gem.add_development_dependency('rubocop-rspec', '~> 1.4')
 end
