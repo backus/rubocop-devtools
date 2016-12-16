@@ -4,13 +4,7 @@
 require 'rubocop'
 require 'pathname'
 
-rubocop_path = Pathname.new(__dir__).parent.join('vendor', 'rubocop')
-
-unless rubocop_path.exist?
-  fail "Can't run specs without a local RuboCop checkout. Look in the README."
-end
-
-Dir["#{rubocop_path}/spec/support/**/*.rb"].each { |f| require f }
+require 'rubocop/rspec/support'
 
 require 'devtools/spec_helper'
 
